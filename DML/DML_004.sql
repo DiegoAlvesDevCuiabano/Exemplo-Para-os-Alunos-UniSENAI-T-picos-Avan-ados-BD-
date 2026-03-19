@@ -8,11 +8,13 @@ SELECT COUNT(*) AS total FROM notas;
 --    Primeiro vamos ver que na nossa base dá igual:
 -- ────────────────────────────────────────
 select * from disciplinas;
+select count(*) from disciplinas;
 select count(ementa) as tem_ementa from disciplinas;
 SELECT COUNT(*) AS total_linhas, COUNT(ementa) AS com_ementa FROM disciplinas;
 -- Resultado: os dois iguais (6 e 6). Tudo preenchido.
 
 -- Agora vamos forçar um vazio (string vazia ''):
+select * from disciplinas;
 UPDATE disciplinas SET ementa = '' WHERE codigo = 'RED001';
 
 SELECT COUNT(*) AS total_linhas, COUNT(ementa) AS com_ementa FROM disciplinas;

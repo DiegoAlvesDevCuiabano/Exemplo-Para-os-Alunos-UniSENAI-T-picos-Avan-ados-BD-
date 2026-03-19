@@ -3,13 +3,19 @@
 -- ════════════════════════════════════════
 
 -- Quantas notas existem no total?
+select * from notas;
 SELECT COUNT(*) AS total_notas FROM notas;
 
 -- Qual a média geral de todas as notas?
+select * from notas;
 SELECT AVG(nota) AS media_crua FROM notas;
 
 -- Mesma média, mas arredondada (2 casas):
 SELECT ROUND(AVG(nota), 2) AS media FROM notas;
+SELECT ROUND(AVG(nota),2) FROM NOTAS;
+
+SELECT ROUND(SUM(NOTA) / COUNT(NOTA),2) FROM NOTAS;
+SELECT AVG(NOTA) FROM NOTAS;
 
 -- Qual a maior nota lançada?
 SELECT MAX(nota) AS maior FROM notas;
